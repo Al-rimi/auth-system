@@ -28,15 +28,35 @@ const supportedLanguages = ['en', 'ar', 'fr', 'zh', 'ru', 'de', 'es', 'it', 'pt'
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YourUsername/auth-system.git
+   git clone https://github.com/Al-rimi/auth-system.git
    ```
 2. **Set up your server environment:**
    - Ensure you have PHP installed (v7 or above is recommended).
    - Run the project on a local server (e.g., XAMPP, WAMP, or MAMP).
 3. **Configure the project settings:**
-   - Add your database details in the `config.php` file.
-4. **Add language translations**: 
-   - Modify JSON files in the `languages` directory to adjust language strings as needed.
+   - Create MySQL database:
+     ```sql
+     CREATE DATABASE IF NOT EXISTS authentication CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+     USE authentication;
+
+     CREATE TABLE IF NOT EXISTS users (
+         id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+         username VARCHAR(50) NOT NULL UNIQUE,
+         email VARCHAR(100) NOT NULL UNIQUE,
+         password VARCHAR(255) NOT NULL,
+         created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+     );
+     ```
+   - Add your database details in the [`dbh.inc.php`](./inc/dbh.inc.php) file:
+
+     ```php
+     <?php
+     $host = "localhost";
+     $dbname = "authentication";
+     $dbuser = "root";
+     $dbpwd = "";
+
+     ```
 
 ## Usage
 
