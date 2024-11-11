@@ -6,12 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"] ?? '';
     $errors = [];
 
-    require_once './contr/signup.contr.php';
+    require_once __DIR__ . './contr/route.contr.php';
+    require_once __DIR__ . './contr/signup.contr.php';
 
     if (!isInputEmpty($username, $email, $pwd)) {
         try {
-            require_once './config/db.config.php';
-            require_once './model/signup.model.php';
+            require_once __DIR__ . './config/db.config.php';
+            require_once __DIR__ . './model/signup.model.php';
 
 
             if (isEmail($email)) {
@@ -24,11 +25,11 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors["emailTaking"] = "Email already used!";
             }
 
-            require_once './config/signup_session.config.php';
+            require_once __DIR__ . './config/signup_session.config.php';
 
             if (!$errors) {
                 createUser($pdo, $username, $email, $pwd);
-                
+
                 session_regenerate_id(true);
                 $newSessionId = session_id();
                 $userId = bin2hex(random_bytes(16));
@@ -36,7 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 session_id($SessionId);
 
                 $_SESSION["userId"] = $userId;
-                header("Location: ../");
+                redirect('/');
                 exit();
             } else {
                 $_SESSION['errorsSignup'] = $errors;
@@ -45,7 +46,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     'email' => $email,
                     'pwd' => $pwd
                 ];
-                header("Location: ../signup");
+                redirect('/signup');
                 exit();
             }
         } catch (PDOException $e) {
@@ -53,14 +54,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die("Connection failed: " . $e->getMessage());
         }
     } else {
-        require_once './config/signup_session.config.php';
+        require_once __DIR__ . './config/signup_session.config.php';
 
         $_SESSION['errorsSignup']['emptyInput'] = "Please fill in all the fields!";
-        header("Location: ../signup");
+        redirect('/signup');
         exit();
     }
 } else {
     // Redirect if accessed directly without POST method
-    header("Location: ../signup");
+    redirect('/signup');
     exit();
 }

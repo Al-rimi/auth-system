@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '../contr/route.contr.php';
+
 declare(strict_types=1);
 
 /**
@@ -83,6 +85,6 @@ function checkErrors()
         echo '<script>';
         echo 'console.log("Signup success!");';
         echo '</script>';
-        header("Location: /"); // Redirect to homepage
+        redirect('/');
     }
 }

@@ -1,14 +1,13 @@
 <?php
-require_once './inc/view/app.view.php';
+require_once __DIR__ . './inc/config/session.config.php';
+require_once __DIR__ . './inc/contr/route.contr.php';
 
 if (!isset($_SESSION['userId'])) {
-    // Redirect to login page if not authenticated
-    $redirectUrl = dirname($_SERVER['PHP_SELF']) . '/login';
-    header("Location: $redirectUrl");
+    redirect('/login');
     exit();
 }
 
-require_once './inc/view/app.view.php';
+require_once __DIR__ . './inc/view/app.view.php';
 ?>
 
 <?php appHead(); ?>

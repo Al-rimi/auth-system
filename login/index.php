@@ -1,7 +1,7 @@
 <?php
-require_once '../inc/view/app.view.php';
-require_once '../inc/view/login.view.php';
-require_once '../inc/config/login_session.config.php';
+require_once __DIR__ . '../inc/view/app.view.php';
+require_once __DIR__ . '../inc/view/login.view.php';
+require_once __DIR__ . '../inc/config/login_session.config.php';
 ?>
 
 <?php appHead(); ?>

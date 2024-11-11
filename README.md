@@ -58,7 +58,7 @@ const supportedLanguages = ['en', 'ar', 'fr', 'zh', 'ru', 'de', 'es', 'it', 'pt'
 
      ```bash
      # Application domain or IP address.
-     APP_DOMAIN=localhost
+     APP_DOMAIN=localhost/auth-system
 
      # Database connection settings.
      DB_HOST=localhost
