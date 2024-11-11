@@ -6,12 +6,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"] ?? '';
     $errors = [];
 
-    require_once 'contr/signup.contr.php';
+    require_once './contr/signup.contr.php';
 
     if (!isInputEmpty($username, $email, $pwd)) {
         try {
-            require_once 'config/db.config.php';
-            require_once 'model/signup.model.php';
+            require_once './config/db.config.php';
+            require_once './model/signup.model.php';
 
 
             if (isEmail($email)) {
@@ -24,12 +24,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors["emailTaking"] = "Email already used!";
             }
 
-            require_once 'config/singup_session.config.php';
+            require_once './config/signup_session.config.php';
 
             if (!$errors) {
                 createUser($pdo, $username, $email, $pwd);
 
-                header("Location: ../singup/?signup=success");
+                header("Location: ../signup/?signup=success");
                 exit();
             } else {
                 $_SESSION['errorsSignup'] = $errors;
@@ -38,7 +38,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                     'email' => $email,
                     'pwd' => $pwd
                 ];
-                header("Location: ../singup");
+                header("Location: ../signup");
                 exit();
             }
         } catch (PDOException $e) {
@@ -46,14 +46,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die("Connection failed: " . $e->getMessage());
         }
     } else {
-        require_once 'config/singup_session.config.php';
+        require_once './config/signup_session.config.php';
 
         $_SESSION['errorsSignup']['emptyInput'] = "Please fill in all the fields!";
-        header("Location: ../singup");
+        header("Location: ../signup");
         exit();
     }
 } else {
     // Redirect if accessed directly without POST method
-    header("Location: ../singup");
+    header("Location: ../signup");
     exit();
 }
