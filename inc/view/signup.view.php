@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '../contr/route.contr.php';
+require_once __DIR__ . '/../contr/route.contr.php';
 
 declare(strict_types=1);
 

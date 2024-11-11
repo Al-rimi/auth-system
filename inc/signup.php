@@ -6,13 +6,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"] ?? '';
     $errors = [];
 
-    require_once __DIR__ . './contr/route.contr.php';
-    require_once __DIR__ . './contr/signup.contr.php';
+    require_once __DIR__ . '/contr/route.contr.php';
+    require_once __DIR__ . '/contr/signup.contr.php';
 
     if (!isInputEmpty($username, $email, $pwd)) {
         try {
-            require_once __DIR__ . './config/db.config.php';
-            require_once __DIR__ . './model/signup.model.php';
+            require_once __DIR__ . '/config/db.config.php';
+            require_once __DIR__ . '/model/signup.model.php';
 
 
             if (isEmail($email)) {
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors["emailTaking"] = "Email already used!";
             }
 
-            require_once __DIR__ . './config/signup_session.config.php';
+            require_once __DIR__ . '/config/signup_session.config.php';
 
             if (!$errors) {
                 createUser($pdo, $username, $email, $pwd);
@@ -54,7 +54,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             die("Connection failed: " . $e->getMessage());
         }
     } else {
-        require_once __DIR__ . './config/signup_session.config.php';
+        require_once __DIR__ . '/config/signup_session.config.php';
 
         $_SESSION['errorsSignup']['emptyInput'] = "Please fill in all the fields!";
         redirect('/signup');

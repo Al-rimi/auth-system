@@ -5,15 +5,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"] ?? '';
     $errors = [];
 
-    require_once __DIR__ . './contr/route.contr.php';
-    require_once __DIR__ . './contr/login.contr.php';
+    require_once __DIR__ . '/contr/route.contr.php';
+    require_once __DIR__ . '/contr/login.contr.php';
 
 
 
     if (!isInputEmpty($usernameOrEmail, $pwd)) {
         try {
-            require_once __DIR__ . './config/db.config.php';
-            require_once __DIR__ . './model/login.model.php';
+            require_once __DIR__ . '/config/db.config.php';
+            require_once __DIR__ . '/model/login.model.php';
 
             $result = getUsernameOrEmail($pdo, $usernameOrEmail);
 
@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors["passwordWrong"] = "Incorrect password";
             }
 
-            require_once __DIR__ . './config/login_session.config.php';
+            require_once __DIR__ . '/config/login_session.config.php';
             if (empty($errors)) {
                 session_regenerate_id(true);
                 $newSessionId = session_id();
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             exit();
         }
     } else {
-        require_once __DIR__ . './config/login_session.config.php';
+        require_once __DIR__ . '/config/login_session.config.php';
         $_SESSION['errorsLogin']['emptyInput'] = "Please fill in all the fields!";
         redirect('/login');
         exit();

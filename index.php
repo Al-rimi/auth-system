@@ -1,13 +1,13 @@
 <?php
-require_once __DIR__ . './inc/config/session.config.php';
-require_once __DIR__ . './inc/contr/route.contr.php';
+require_once __DIR__ . '/inc/config/session.config.php';
+require_once __DIR__ . '/inc/contr/route.contr.php';
 
 if (!isset($_SESSION['userId'])) {
     redirect('/login');
     exit();
 }
 
-require_once __DIR__ . './inc/view/app.view.php';
+require_once __DIR__ . '/inc/view/app.view.php';
 ?>
 
 <?php appHead(); ?>

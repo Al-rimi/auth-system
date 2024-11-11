@@ -1,6 +1,6 @@
 <?php
 
-require_once __DIR__ . '../config/env.config.php';
+require_once __DIR__ . '/../config/env.config.php';
 
 /**
  * Redirects to a given URL, defaulting to the URL specified in the .env file.
