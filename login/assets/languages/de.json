@@ -1,0 +1,24 @@
+{
+  "head": {
+      "siteLanguage": "de",
+      "description": "Entdecken Sie führende chinesische Universitäten und bewerben Sie sich ganz einfach für Stipendien über unsere Plattform. Vereinfachen Sie Ihren Bewerbungsprozess mit unseren umfangreichen Ressourcen und Unterstützungen.",
+      "keywords": "chinesische Universitäten, Stipendien, bewerben, Bildung, SYAlux, Hochschulbildung, im Ausland studieren, internationale Studierende, akademische Programme, Chinesischkurse",
+      "siteName": "SYAlux Bildung",
+      "title": "Anmelden"
+  },
+  "body": {
+      "font": "Roboto, sans-serif",
+      "h1": "Anmelden",
+      "b1": "Eingeben",
+      "b2": "Passwort vergessen?",
+      "b3": "Registrieren",
+      "i1": "Benutzername oder E-Mail",
+      "i2": "Passwort",
+      "username": {
+          "usernameOrEmailWrong": "Benutzername oder E-Mail nicht gefunden"
+      },
+      "password": {
+          "passwordWrong": "Falsches Passwort"
+      }
+  }
+}

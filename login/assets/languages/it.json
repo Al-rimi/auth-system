@@ -1,0 +1,24 @@
+{
+  "head": {
+      "siteLanguage": "it",
+      "description": "Scopri le migliori università cinesi e richiedi facilmente borse di studio attraverso la nostra piattaforma. Semplifica il tuo processo di candidatura con le nostre risorse estese e il supporto.",
+      "keywords": "università cinesi, borse di studio, applicare, istruzione, SYAlux, istruzione superiore, studiare all'estero, studenti internazionali, programmi accademici, corsi di cinese",
+      "siteName": "Educazione SYAlux",
+      "title": "Accedi"
+  },
+  "body": {
+      "font": "Open Sans, sans-serif",
+      "h1": "Accedi",
+      "b1": "Entra",
+      "b2": "Password dimenticata?",
+      "b3": "Registrati",
+      "i1": "Nome utente o Email",
+      "i2": "Password",
+      "username": {
+          "usernameOrEmailWrong": "Nome utente o email non trovato"
+      },
+      "password": {
+          "passwordWrong": "Password errata"
+      }
+  }
+}

@@ -1,0 +1,82 @@
+/* Classes that changes back and forth */
+@media (hover: hover) {
+    .mainbNo:hover {
+        background: rgba(255, 255, 255, 0.04);
+        color: rgba(255, 255, 255, 0.5);
+        transform: scale(1.01);
+    }
+
+    .showHideImage:hover {
+        opacity: 0.5;
+    }
+
+    .no:hover {
+        background: rgba(255, 50, 50, 0.3);
+    }
+}
+
+/* If there are an error in any input it will get this class */
+.no {
+    background: rgba(255, 0, 0, 0.28);
+}
+
+.on:focus {
+    background: rgba(255, 0, 0, 0.28);
+}
+
+.no:after {
+    background: rgba(255, 0, 0, 0.28);
+}
+
+.no::before {
+    background: rgba(255, 0, 0, 0.28);
+}
+
+
+/* If there are an error in any input The submit button will get this class */
+.mainbNo {
+    background: rgba(255, 255, 255, 0.02);
+    font-size: 18px;
+    margin-top: 20px;
+    padding: 8px;
+    color: rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s background 0.2s;
+}
+.mainbNo:active {
+    background: rgba(255, 255, 255, 0.01);
+}
+
+/* The submit button is disabled and clicked it will shake */
+.shakeb {
+    animation: shake 0.3s;
+}
+@keyframes shake {
+    0% {
+        transform: scale(0.9) rotate(-2deg);
+    }
+
+    25% {
+        transform: rotate(2deg);
+    }
+
+    50% {
+        transform: rotate(-2deg);
+    }
+
+    75% {
+        transform: rotate(2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+
+/* 
+If the language entered in the password input is right to lift 
+this show hide img class will activate. 
+*/
+.showHideImageRtl{
+    left: 6%;
+}

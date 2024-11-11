@@ -1,0 +1,24 @@
+{
+    "head": {
+        "siteLanguage": "fr",
+        "description": "Découvrez les meilleures universités chinoises et postulez facilement pour des bourses grâce à notre plateforme. Simplifiez votre processus de candidature avec nos ressources et notre soutien étendus.",
+        "keywords": "universités chinoises, bourses, postuler, éducation, SYAlux, enseignement supérieur, étudier à l'étranger, étudiants internationaux, programmes académiques, cours de chinois",
+        "siteName": "Éducation SYAlux",
+        "title": "Connexion"
+    },
+    "body": {
+        "font": "english1",
+        "h1": "Connexion",
+        "b1": "Entrer",
+        "b2": "Mot de passe oublié?",
+        "b3": "S'inscrire",
+        "i1": "Nom d'utilisateur ou Email",
+        "i2": "Mot de passe",
+        "username": {
+            "usernameOrEmailWrong": "Nom d'utilisateur ou email introuvable"
+        },
+        "password": {
+            "passwordWrong": "Mot de passe incorrect"
+        }
+    }
+}

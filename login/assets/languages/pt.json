@@ -1,0 +1,24 @@
+{
+  "head": {
+      "siteLanguage": "pt",
+      "description": "Descubra as principais universidades chinesas e candidate-se facilmente a bolsas de estudo através da nossa plataforma. Simplifique o seu processo de candidatura com os nossos extensos recursos e apoio.",
+      "keywords": "universidades chinesas, bolsas de estudo, candidatar-se, educação, SYAlux, ensino superior, estudar no exterior, estudantes internacionais, programas acadêmicos, cursos de chinês",
+      "siteName": "Educação SYAlux",
+      "title": "Entrar"
+  },
+  "body": {
+      "font": "Montserrat, sans-serif",
+      "h1": "Entrar",
+      "b1": "Entrar",
+      "b2": "Esqueceu a senha?",
+      "b3": "Inscrever-se",
+      "i1": "Nome de usuário ou Email",
+      "i2": "Senha",
+      "username": {
+          "usernameOrEmailWrong": "Nome de usuário ou email não encontrado"
+      },
+      "password": {
+          "passwordWrong": "Senha incorreta"
+      }
+  }
+}

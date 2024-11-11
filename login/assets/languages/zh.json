@@ -1,0 +1,24 @@
+{
+  "head": {
+      "siteLanguage": "zh",
+      "description": "通过我们的平台，轻松发现顶级中国大学并申请奖学金。通过我们的丰富资源和支持，简化您的申请流程。",
+      "keywords": "中国大学, 奖学金, 申请, 教育, SYAlux, 高等教育, 留学, 国际学生, 学术项目, 中文课程",
+      "siteName": "SYAlux 教育",
+      "title": "登录"
+  },
+  "body": {
+      "font": "Noto Sans SC, sans-serif",
+      "h1": "登录",
+      "b1": "进入",
+      "b2": "忘记密码？",
+      "b3": "注册",
+      "i1": "用户名或电子邮件",
+      "i2": "密码",
+      "username": {
+          "usernameOrEmailWrong": "未找到用户名或电子邮件"
+      },
+      "password": {
+          "passwordWrong": "密码不正确"
+      }
+  }
+}

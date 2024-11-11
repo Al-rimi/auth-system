@@ -1,0 +1,35 @@
+{
+  "head": {
+      "siteLanguage": "es",
+      "description": "Descubra las principales universidades chinas y solicite becas fácilmente a través de nuestra plataforma. Simplifique su proceso de solicitud con nuestros amplios recursos y apoyo.",
+      "keywords": "universidades chinas, becas, solicitar, educación, SYAlux, educación superior, estudiar en el extranjero, estudiantes internacionales, programas académicos, cursos de chino",
+      "siteName": "Educación SYAlux",
+      "title": "Regístrate"
+  },
+  "body": {
+      "font": "Lato, sans-serif",
+      "h1": "Registrarse",
+      "b1": "Entrar",
+      "b2": "¿Tienes problemas?",
+      "b3": "Iniciar sesión",
+      "i1": "Nombre de usuario",
+      "i3": "Correo electrónico",
+      "i2": "Contraseña",
+      "i4": "Confirmar contraseña",
+      "username": {
+          "usernameTaking": "El nombre de usuario ya está en uso",
+          "usernameNotValidCharacters": "No se permiten caracteres especiales",
+          "usernameNotValidLengthLong": "La longitud máxima es de 30 caracteres",
+          "usernameNotValidLengthShort": "La longitud mínima es de 3 caracteres"
+      },
+      "email": {
+          "emailTaking": "El correo electrónico ya está registrado",
+          "emailNotValidPattern": "Por favor, introduzca una dirección de correo electrónico válida"
+      },
+      "password": {
+          "passwordNoUppercaselowercase": "Debe incluir letras mayúsculas y minúsculas",
+          "passwordNotValidLength": "Debe tener al menos 8 caracteres",
+          "passwordsMatch": "Las contraseñas no coinciden"
+      }
+  }
+}

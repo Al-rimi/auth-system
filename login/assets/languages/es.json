@@ -1,0 +1,24 @@
+{
+  "head": {
+      "siteLanguage": "es",
+      "description": "Descubra las principales universidades chinas y solicite becas fácilmente a través de nuestra plataforma. Simplifique su proceso de solicitud con nuestros amplios recursos y apoyo.",
+      "keywords": "universidades chinas, becas, solicitar, educación, SYAlux, educación superior, estudiar en el extranjero, estudiantes internacionales, programas académicos, cursos de chino",
+      "siteName": "Educación SYAlux",
+      "title": "Iniciar sesión"
+  },
+  "body": {
+      "font": "Lato, sans-serif",
+      "h1": "Iniciar sesión",
+      "b1": "Entrar",
+      "b2": "¿Olvidaste tu contraseña?",
+      "b3": "Registrarse",
+      "i1": "Nombre de usuario o correo electrónico",
+      "i2": "Contraseña",
+      "username": {
+          "usernameOrEmailWrong": "Nombre de usuario o correo electrónico no encontrado"
+      },
+      "password": {
+          "passwordWrong": "Contraseña incorrecta"
+      }
+  }
+}

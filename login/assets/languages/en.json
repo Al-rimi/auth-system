@@ -1,0 +1,24 @@
+{
+    "head": {
+        "siteLanguage": "en",
+        "description": "Discover top Chinese universities and apply for scholarships with ease through our platform. Streamline your application process with our extensive resources and support.",
+        "keywords": "Chinese universities, scholarships, apply, education, SYAlux, higher education, study abroad, international students, academic programs, Chinese language courses",
+        "siteName": "SYAlux Education",
+        "title": "Login"
+    },
+    "body": {
+        "font": "english1",
+        "h1": "Login",
+        "b1": "Enter",
+        "b2": "Forgot password?",
+        "b3": "Sign up",
+        "i1": "Username or Email",
+        "i2": "Password",
+        "username": {
+            "usernameOrEmailWrong": "Username or email not found"
+        },
+        "password": {
+            "passwordWrong": "Incorrect password"
+        }
+    }
+}

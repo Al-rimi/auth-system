@@ -1,0 +1,35 @@
+{
+    "head": {
+        "siteLanguage": "en",
+        "description": "Describe your webapp",
+        "keywords": "Keywords to make your website easier to find",
+        "siteName": "Your webapp name",
+        "title": "Sign Up"
+    },
+    "body": {
+        "font": "english1",
+        "h1": "SignUp",
+        "b1": "Enter",
+        "b2": "Having trouble?",
+        "b3": "Login",
+        "i1": "Username",
+        "i3": "Email",
+        "i2": "Password",
+        "i4": "Confirm Password",
+        "username": {
+            "usernameTaking": "Username is already taken",
+            "usernameNotValidCharacters": "Special characters are not allowed",
+            "usernameNotValidLengthLong": "Maximum length is 30 characters",
+            "usernameNotValidLengthShort": "Minimum length is 3 characters"
+        },
+        "email": {
+            "emailTaking": "Email is already registered",
+            "emailNotValidPattern": "Please enter a valid email address"
+        },
+        "password": {
+            "passwordNoUppercaselowercase": "Must include both UPPER and lower case letters",
+            "passwordNotValidLength": "Must be at least 8 characters long",
+            "passwordsMatch": "Passwords do not match"
+        }
+    }
+}
