@@ -5,12 +5,12 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $pwd = $_POST["pwd"] ?? '';
     $errors = [];
 
-    require_once 'login_contr.inc.php';
+    require_once 'contr/login.contr.php';
 
     if (!isInputEmpty($usernameOrEmail, $pwd)) {
         try {
-            require_once 'dbh.inc.php';
-            require_once 'login_model.inc.php';
+            require_once 'config/db.config.php';
+            require_once 'model/login.model.php';
 
             $result = getUsernameOrEmail($pdo, $usernameOrEmail);
 
@@ -20,7 +20,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $errors["passwordWrong"] = "Incorrect password";
             }
 
-            require_once 'config_session.inc.php';
+            require_once 'config/login_session.config.php';
             if (empty($errors)) {
                 session_regenerate_id(true);
                 $newSessionId = session_id();
@@ -31,7 +31,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_SESSION["userUsername"] = htmlspecialchars($result["username"]);
                 $_SESSION['last_regeneration'] = time();
 
-                header("Location: ../?login=success");
+                header("Location: ../login/?login=success");
                 $pdo = null;
                 exit();
             } else {
@@ -39,23 +39,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 $_SESSION['loginData'] = [
                     'usernameOrEmail' => $usernameOrEmail,
                 ];
-                header("Location: ../");
+                header("Location: ../login");
                 exit();
             }
         } catch (PDOException $e) {
             // Handle database connection errors gracefully
             $_SESSION['errorsLogin'] = ["dbError" => "A database error occurred. Please try again later."];
-            header("Location: ../");
+            header("Location: ../login");
             exit();
         }
     } else {
-        require_once 'config_session.inc.php';
+        require_once 'config/login_session.config.php';
         $_SESSION['errorsLogin']['emptyInput'] = "Please fill in all the fields!";
-        header("Location: ../");
+        header("Location: ../login");
         exit();
     }
 } else {
     // Redirect if accessed directly without POST method
-    header("Location: ../");
+    header("Location: ../login");
     exit();
 }

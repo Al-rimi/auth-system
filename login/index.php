@@ -1,7 +1,7 @@
 <?php
-require_once '../inc/config_session.inc.php';
-require_once '../inc/login_view.inc.php';
-require_once '../inc/app_view.inc.php';
+require_once '../inc/view/app.view.php';
+require_once '../inc/view/login.view.php';
+require_once '../inc/config/login_session.config.php';
 ?>
 
 <?php appHead(); ?>
@@ -11,7 +11,7 @@ require_once '../inc/app_view.inc.php';
 
     <div id="divForm" class="divForm">
         <h1 id="h1"></h1>
-        <form action="../inc/login.inc.php" method="post">
+        <form action="../inc/login.php" method="post">
             <?php loginInputs(); ?>
             <button id="b1" class="mainbNo"></button>
         </form>

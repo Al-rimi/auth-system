@@ -2,6 +2,11 @@
 
 A simple and fully functional login and signup system built using raw PHP, JavaScript, HTML, CSS, and JSON for client-side translations. This project supports multilingual authentication, with both client-side and server-side validation, enhancing user experience and security.
 
+## Live Preview
+
+See the [Live Demo](https://auth.demo.syalux.com) of the login and signup pages.
+
+
 ## Features
 
 - **Client-Side Authentication**: For quick user feedback and seamless user experience.

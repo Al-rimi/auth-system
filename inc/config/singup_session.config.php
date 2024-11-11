@@ -1,5 +1,7 @@
 <?php
 
+require_once __DIR__ . '/env.config.php';
+
 // Sessions use cookies only and strict mode
 ini_set('session.use_only_cookies', 1);
 ini_set('session.use_strict_mode', 1);
@@ -7,8 +9,8 @@ ini_set('session.use_strict_mode', 1);
 // Session cookie parameters
 session_set_cookie_params([
     'lifetime' => 1800,
-    'domain' => 'localhost',
-    'path' => '/',
+    'domain' => getenv('APP_DOMAIN') ?: 'localhost',
+    'path' => '/singup',
     'secure' => isset($_SERVER['HTTPS']), // Only if HTTPS
     'httponly' => true
 ]);
