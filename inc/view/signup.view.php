@@ -1,8 +1,8 @@
 <?php
 
-require_once __DIR__ . '/../contr/route.contr.php';
-
 declare(strict_types=1);
+
+require_once __DIR__ . '/../contr/route.contr.php';
 
 /**
  * Generates the HTML markup for user sign-up form inputs (username, email, password, confirm password) 
