@@ -28,10 +28,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                 session_id($SessionId);
 
                 $_SESSION["userId"] = $result["id"];
-                $_SESSION["userUsername"] = htmlspecialchars($result["username"]);
-                $_SESSION['last_regeneration'] = time();
-
-                header("Location: ../login/?login=success");
+                header("Location: ../");
                 $pdo = null;
                 exit();
             } else {

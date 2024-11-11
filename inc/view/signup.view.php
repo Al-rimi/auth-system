@@ -69,9 +69,11 @@ function checkErrors()
         }
         echo '</script>';
         unset($_SESSION['errorsSignup']);
-    } elseif (isset($_GET["signup"]) && $_GET["signup"] === "success") {
+    } elseif (isset($_SESSION['userID'])) {
         echo '<script>';
         echo 'console.log("Signup success!");';
         echo '</script>';
+
+        header("Location: ../");
     }
 }

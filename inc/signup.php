@@ -28,8 +28,15 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
 
             if (!$errors) {
                 createUser($pdo, $username, $email, $pwd);
+                
+                session_regenerate_id(true);
+                $newSessionId = session_id();
+                $userId = bin2hex(random_bytes(16));
+                $SessionId = $newSessionId . "_" . $userId;
+                session_id($SessionId);
 
-                header("Location: ../signup/?signup=success");
+                $_SESSION["userId"] = $userId;
+                header("Location: ../");
                 exit();
             } else {
                 $_SESSION['errorsSignup'] = $errors;

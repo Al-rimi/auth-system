@@ -41,26 +41,26 @@ const supportedLanguages = ['en', 'ar', 'fr', 'zh', 'ru', 'de', 'es', 'it', 'pt'
 3. **Configure the project settings:**
    - Create MySQL database:
      ```sql
-     CREATE DATABASE IF NOT EXISTS authentication CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
-     USE authentication;
+     CREATE DATABASE IF NOT EXISTS auth CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+     USE auth;
 
      CREATE TABLE IF NOT EXISTS users (
          id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
          username VARCHAR(50) NOT NULL UNIQUE,
          email VARCHAR(100) NOT NULL UNIQUE,
-         password VARCHAR(255) NOT NULL,
+         pwd VARCHAR(255) NOT NULL,
          created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
      );
      ```
-   - Add your database details in the [`dbh.inc.php`](./inc/dbh.inc.php) file:
+   - Set up your domain if necessary [`.env`](./inc/.env) file:
 
-     ```php
-     <?php
-     $host = "localhost";
-     $dbname = "authentication";
-     $dbuser = "root";
-     $dbpwd = "";
+     ```bash
+        APP_DOMAIN=localhost
 
+        DB_HOST=localhost
+        DB_NAME=auth
+        DB_USER=root
+        DB_PASSWORD=
      ```
 
 ## Usage
