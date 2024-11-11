@@ -11,7 +11,7 @@ session_set_cookie_params([
     'lifetime' => 1800,
     'domain' => getenv('APP_DOMAIN') ?: 'localhost',
     'path' => '/singup',
-    'secure' => isset($_SERVER['HTTPS']), // Only if HTTPS
+    'secure' => isset($_SERVER['HTTPS']),
     'httponly' => true
 ]);
 

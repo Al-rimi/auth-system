@@ -17,7 +17,7 @@ require_once '../inc/config/login_session.config.php';
         </form>
         <div class="divb1b2">
             <button id="b2" class="b1"></button>
-            <button id="b3" class="b2" onclick="window.location.href='../singup';"></button>
+            <button id="b3" class="b2" onclick="window.location.href='../signup';"></button>
         </div>
     </div>
 

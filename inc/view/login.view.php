@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+/**
+ * Generates the HTML markup for the login form inputs (username/email, password) 
+ * and displays any error messages related to login failures.
+ */
 function loginInputs()
 {
     // Username or Email input and error handling
@@ -45,9 +49,14 @@ function loginInputs()
     echo $passwordInput . $passwordErrorMessages;
 }
 
+/**
+ * Checks for login errors in the session and logs them to the console. 
+ * If login is successful, logs success and redirects to the homepage.
+ */
 function checkErrors()
 {
     if (isset($_SESSION['errorsLogin'])) {
+        // Log all login errors to the console
         $errors = $_SESSION['errorsLogin'];
         echo '<script>';
         foreach ($errors as $key => $error) {
@@ -56,11 +65,11 @@ function checkErrors()
         }
         echo '</script>';
         unset($_SESSION['errorsLogin']);
-    } elseif (isset($_SESSION['userID'])) {
+    } elseif (isset($_SESSION['userId'])) {
+        // Log success and redirect to the homepage after successful login
         echo '<script>';
         echo 'console.log("Login success!");';
         echo '</script>';
-
-        header("Location: ../");
+        header("Location: /");
     }
 }

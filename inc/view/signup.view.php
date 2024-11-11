@@ -2,6 +2,10 @@
 
 declare(strict_types=1);
 
+/**
+ * Generates the HTML markup for user sign-up form inputs (username, email, password, confirm password) 
+ * and associated error messages based on session data.
+ */
 function signupInputs()
 {
     // Username input and error handling
@@ -59,9 +63,14 @@ function signupInputs()
     echo $confirmPasswordInput . $confirmPasswordErrorMessages;
 }
 
+/**
+ * Checks if there are any sign-up errors in the session and logs them to the console.
+ * If the user is successfully signed up, logs success and redirects to the homepage.
+ */
 function checkErrors()
 {
     if (isset($_SESSION['errorsSignup'])) {
+        // Log all sign-up errors to the console
         $errors = $_SESSION['errorsSignup'];
         echo '<script>';
         foreach ($errors as $key => $error) {
@@ -69,11 +78,11 @@ function checkErrors()
         }
         echo '</script>';
         unset($_SESSION['errorsSignup']);
-    } elseif (isset($_SESSION['userID'])) {
+    } elseif (isset($_SESSION['userId'])) {
+        // Log success and redirect to homepage after successful sign-up
         echo '<script>';
         echo 'console.log("Signup success!");';
         echo '</script>';
-
-        header("Location: ../");
+        header("Location: /"); // Redirect to homepage
     }
 }

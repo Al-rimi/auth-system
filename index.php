@@ -1,9 +1,15 @@
 <?php
 require_once './inc/view/app.view.php';
-require_once './inc/config/session.config.php';
-?>
 
-<?php if (!isset($_SESSION['userId'])) header("Location: /login"); ?>
+if (!isset($_SESSION['userId'])) {
+    // Redirect to login page if not authenticated
+    $redirectUrl = dirname($_SERVER['PHP_SELF']) . '/login';
+    header("Location: $redirectUrl");
+    exit();
+}
+
+require_once './inc/view/app.view.php';
+?>
 
 <?php appHead(); ?>
 
