@@ -10,8 +10,16 @@ require_once __DIR__ . '/../config/env.config.php';
  */
 function redirect(?string $location = null, int $statusCode = 302): void
 {
-    // Use the environment variable URL if no location is provided.
-    $redirectUrl = $location ?? $_ENV['APP_DOMAIN'] ?? '/';
+    // Set the home base URL from the environment variable or default to '/'.
+    $home = $_ENV['APP_DOMAIN'] ?? '/';
+
+    // Ensure the base URL starts with a protocol (http or https).
+    if (!preg_match('#^https?://#', $home)) {
+        $home = 'http://' . $home;
+    }
+
+    // Combine the home URL with the provided location (or default to the home itself if $location is null).
+    $redirectUrl = rtrim($home, '/') . '/' . ltrim($location ?? '', '/');
 
     // Perform the redirection.
     header("Location: $redirectUrl", true, $statusCode);
